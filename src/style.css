@@ -1,0 +1,94 @@
+h1,
+h2 {
+  text-align: center;
+  font-family: "Acme", sans-serif;
+}
+h1 {
+  margin: 5px 0;
+  padding: 5px;
+  color: rgb(41, 35, 35);
+}
+h2 {
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  width: 60%;
+  margin-block-start: 20px;
+  padding: 30px;
+  background: linear-gradient(
+    102.7deg,
+    rgb(253, 218, 255) 8.2%,
+    rgb(223, 173, 252) 19.6%,
+    rgb(173, 205, 252) 36.8%,
+    rgb(173, 252, 244) 73.2%,
+    rgb(202, 248, 208) 90.9%
+  );
+}
+.search {
+  margin-top: 5px;
+}
+.city-form {
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.dateTime {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 auto;
+  text-align: center;
+}
+.tempValue {
+  font-size: 50px;
+  font-weight: 900;
+}
+.units {
+  position: relative;
+  top: -13px;
+}
+.humidity,
+.wind {
+  font-family: "PT Serif", serif;
+}
+.humidity {
+  text-align: center;
+  font-size: 15px;
+}
+.wind {
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+}
+.quote {
+  text-align: center;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 24px;
+}
+.days {
+  font-size: 22px;
+  font-family: "Jura", sans-serif;
+  font-weight: 600;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  color: rgb(109, 24, 95);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(31, 42, 49, 0.3);
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+.days:hover {
+  border: none;
+  background: lightcyan;
+  cursor: pointer;
+}
