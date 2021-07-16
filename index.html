@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherNow</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Jura:wght@300;400;500;600;700&family=Nanum+Pen+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f8c2144dea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="search">
+            <form id="search-form">
+              <input
+                type="search"
+                placeholder="Find city"
+                class="city-form"
+                id="city-input"
+              />
+              <input type="submit" value="search" class="btn btn-primary" />
+            </form>
+          </div>
+          <h1>Jakarta</h1>
+          <div class="dateTime"></div>
+          <h2>
+            <span id="description">Sunny,</span>
+            <span class="tempValue"> 35</span>
+            <span class="units">
+              <a href="#" id="celsius-value">°C</a> |
+              <a href="#" id="fahrenheit-value">°F</a>
+            </span>
+            <br />
+            <i class="fas fa-sun weather-icon"></i>
+          </h2>
+          <div class="humidity">Humidity <span id="humidity">50</span>%</div>
+          <div class="wind">Wind <span id="wind">2</span> km/h</div>
+          <div class="card">
+            <div class="card-body quote">
+              <p>"It's time to go out and enjoy the sun 😉"</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="days">
+            <p>
+              Tomorrow, 25°C
+              <i class="fas fa-cloud-sun-rain"></i>
+            </p>
+          </div>
+
+          <div class="days">
+            <p>
+              Monday, 25°C
+              <i class="fas fa-cloud-sun-rain"></i>
+            </p>
+          </div>
+
+          <div class="days">
+            <p>
+              Tuesday, 25°C
+              <i class="fas fa-cloud-sun-rain"></i>
+            </p>
+          </div>
+          <div class="days">
+            <p>
+              Wednesday, 25°C
+              <i class="fas fa-cloud-sun-rain"></i>
+            </p>
+          </div>
+          <div class="days">
+            <p>
+              Thursday, 25°C
+              <i class="fas fa-cloud-sun-rain"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
