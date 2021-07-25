@@ -30,6 +30,7 @@ a:hover {
     rgb(202, 248, 208) 90.9%
   );
 }
+
 .search {
   margin-top: 5px;
 }
@@ -54,6 +55,9 @@ a:hover {
 .units {
   position: relative;
   top: -13px;
+}
+.description {
+  text-transform: capitalize;
 }
 .humidity,
 .wind {

@@ -4,6 +4,11 @@ function showCurrentTemp(response) {
   tempValue.innerHTML = `${temperature}`;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = response.data.wind.speed;
+  description.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function currentPosition(position) {
   let lat = position.coords.latitude;
@@ -20,6 +25,11 @@ function showTemp(response) {
   tempValue.innerHTML = `${temperature}`;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = response.data.wind.speed;
+  description.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function search(event) {
   event.preventDefault();
@@ -37,6 +47,8 @@ let h1 = document.querySelector("h1");
 let tempValue = document.querySelector(".tempValue");
 let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
+let description = document.querySelector("#description");
+let icon = document.querySelector("#icon");
 let now = new Date();
 let dateTime = document.querySelector(".dateTime");
 let date = now.getDate();
