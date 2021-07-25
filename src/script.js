@@ -9,6 +9,7 @@ function showCurrentTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celsiusValue = response.data.main.temp;
 }
 function currentPosition(position) {
   let lat = position.coords.latitude;
@@ -30,6 +31,7 @@ function showTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celsiusValue = response.data.main.temp;
 }
 function search(event) {
   event.preventDefault();
@@ -74,15 +76,26 @@ let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
 dateTime.innerHTML = `${day}, ${month} ${date} ${year}, ${hours}:${minutes}`;
 
-//function changeFahrenheit() {
-//  let temperature = document.querySelector(".tempValue");
-//  temperature.innerHTML = 75;
-//}
-//let fahrenheit = document.querySelector("#fahrenheit-value");
-//fahrenheit.addEventListener("click", changeFahrenheit);
-//function changeCelsius() {
-//  let temperature = document.querySelector(".tempValue");
-//  temperature.innerHTML = 35;
-//}
-//let celsius = document.querySelector("#celsius-value");
-//celsius.addEventListener("click", changeCelsius);
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp-value");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusValue * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp-value");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperature.innerHTML = Math.round(celsiusValue);
+}
+let celsiusValue = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-value");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-value");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
