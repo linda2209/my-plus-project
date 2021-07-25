@@ -5,7 +5,7 @@ function showCurrentTemp(response) {
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = response.data.wind.speed;
   description.innerHTML = response.data.weather[0].description;
-  iconElement.setAttribute(
+  icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
@@ -26,7 +26,7 @@ function showTemp(response) {
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = response.data.wind.speed;
   description.innerHTML = response.data.weather[0].description;
-  iconElement.setAttribute(
+  icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );

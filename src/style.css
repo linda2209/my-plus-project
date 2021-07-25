@@ -7,6 +7,7 @@ h1 {
   margin: 5px 0;
   padding: 5px;
   color: rgb(41, 35, 35);
+  text-transform: capitalize;
 }
 h2 {
   margin-bottom: 10px;
