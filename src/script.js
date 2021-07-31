@@ -10,7 +10,6 @@ function showCurrentTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusValue = response.data.main.temp;
-  descriptionElement = response.data.weather[0].description;
 }
 function currentPosition(position) {
   let lat = position.coords.latitude;
@@ -33,7 +32,6 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusValue = response.data.main.temp;
-  descriptionElement = response.data.weather[0].description;
 }
 function search(event) {
   event.preventDefault();
@@ -102,13 +100,22 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-value");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-let quote = document.querySelector("#quote");
-let descriptionElement = null;
-function displayQuote(response) {
-  if (descriptionElement === "haze") {
-    quote.innerHTML = "hello";
-  } else {
-    quote.innerHTML = "hi";
-  }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="days">
+      <p>
+        ${day}, 25°C
+        <i class="fas fa-cloud-sun-rain"></i>
+      </p>
+  </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
 }
-displayQuote;
+
+displayForecast();
