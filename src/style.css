@@ -83,7 +83,7 @@ a:hover {
   font-family: "Jura", sans-serif;
   font-weight: 600;
   margin: 10px auto;
-  padding: 10px;
+  padding: 0;
   text-align: center;
   color: rgb(109, 24, 95);
   border-style: solid;
@@ -100,4 +100,5 @@ a:hover {
 .units .active {
   color: black;
   text-decoration: none;
+  cursor: default;
 }
